@@ -27,9 +27,10 @@ var cfgFile string
 
 // RootCmd represents the base command when called without any subcommands
 var RootCmd = &cobra.Command{
-	Use:   "go-multi-command",
-	Short: "A example of multi-command",
-	Long:  `Examples of commands and arguments based off tools like helm, docker, and git.`,
+	Use:     "go-multi-command",
+	Version: "1.2.3",
+	Short:   "A example of multi-command",
+	Long:    `Examples of commands and arguments based off tools like helm, docker, and git.`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
