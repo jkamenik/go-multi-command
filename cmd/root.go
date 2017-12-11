@@ -45,6 +45,10 @@ func Execute() {
 func init() {
 	cobra.OnInitialize(initConfig)
 
+	RootCmd.PersistentFlags().Bool("dry-run", false, "Run the command, but don't apply any changes.")
+	RootCmd.PersistentFlags().Int8P("verbose", "v", 0, "Verbosity of output.  0 = no verbosity, 3 = max verbosity.")
+	RootCmd.PersistentFlags().String("kubeconfig", ".", "The path to a kubeconfig file that contains authentication details for connecting to the cluster.")
+
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
